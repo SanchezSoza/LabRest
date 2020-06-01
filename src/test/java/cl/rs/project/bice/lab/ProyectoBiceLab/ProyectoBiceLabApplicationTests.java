@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import cl.rs.project.bice.lab.model.BiceLabModel;
+import cl.rs.project.bice.lab.proyectoBiceLab.model.BiceLabModel;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

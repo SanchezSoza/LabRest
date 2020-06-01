@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bice Lab</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="../css/angular-confirm.min.css" rel="stylesheet">
+  </head>
+  <body ng-app="idxApp">
+    <div ng-include="'cabecera'"></div>
+    <header>
+      <div class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+           	  	<div>
+					<p class="text-left col-lg-5">Ingresar Valor <input type="text" id="valor" name="valor" placeholder="cobre"class="text-right"></p>
+				</div>
+				<div>
+					<p class="col-lg-5">
+						<div id="botonMostrarInfoValor" ng-controller="valoresController"  class="btn baja">
+							<button id="botonCargarValor" ng-click="cargarPorValor()">
+								Mostrar Información
+							</button>
+						</div>
+					</p>
+				</div>
+            </div>
+          </div>
+        </div>
+      </div>
+	</header>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="../js/popper.min.js"></script> 
+    <script src="../js/bootstrap-4.4.1.js"></script>
+	<script src="../js/angular.min.js"></script>
+    <script src="../js/angular-ui-router.min.js"></script>
+    <script src="../js/angular-animate.min.js"></script> 
+    <script src="../js/angular-sanitize.min.js"></script> 
+    <script src="../js/angular-confirm.min.js"></script>
+	<script src="../js/app.js"></script>
+  </body>
+</html>
