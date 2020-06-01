@@ -30,8 +30,13 @@ public class HomeController {
 		return "indicadoresValorFecha";
 	}
 	
-	@RequestMapping("/resultadoIndicadores")
-	public String resultadoIndicadoresValorFecha(){
-		return "resultadoTodosLosIndicadores";
+	@RequestMapping("/resultadoValor/{valor}")
+	public String resultadoValor(){
+		return "resultadoValor";
+	}
+	
+	@RequestMapping("/resultadoValorFecha/{valor}/{fecha}")
+	public String resultadoValorFecha(){
+		return "resultadoValorFecha";
 	}
 }

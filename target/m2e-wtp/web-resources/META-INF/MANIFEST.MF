@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: ProyectoBiceLab
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Rodrigo
+Built-By: rodrigosanchez
 Implementation-Vendor-Id: cl.rs.project.bice.lab
-Build-Jdk: 1.8.0_241
+Build-Jdk: 1.8.0_231
 Implementation-URL: http://projects.spring.io/spring-boot/ProyectoBice
  Lab/
 Created-By: Maven Integration for Eclipse

@@ -10,30 +10,53 @@
 	<link href="../css/angular-confirm.min.css" rel="stylesheet">
   </head>
   <body ng-app="idxApp">
-    <div ng-include="'cabecera'"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/home"><img src="images/BiceLab.png" width="216" height="26" alt=""/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> <a class="nav-link" href="/resultadoIndicadores">Ver Todos Los Indicadores</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/indicadoresValor">Ver Indicadores por Valor</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/indicadoresValorFecha">Ver Indicadores Por Valor y Fecha</a> </li>
+        </ul>
+      </div>
+    </nav>
     <header>
       <div class="jumbotron">
         <div class="container">
           <div class="row">
-            <div class="col-12">
-              <h1 class="text-center">Todos Los Indicadores</h1>
-              <p class="text-center">Pagina de Inicio donde se puede navegar por tres botones, los cuales cada uno realiza una accion diferente y consume un sercivio Rest diferente, como muestran las cabeceras, estos servicios rest pueden mostrar todos los indicadores sin ningun parametro en especifico definido y hay otros en los cuales se solicitaran ingresar uno o dos datos para poder filtrar la informacion y entregar datos mas especificos</p>
-              <p>&nbsp;</p>
+            <div class="col-12" ng-controller="resultadoController">
+              <p class="text-center">
+           		<table id="rounded-corner" class="" border="1">
+					<thead>
+						<tr>
+							<th nowrap="nowrap">Fecha</th>
+							<th nowrap="nowrap">Nombre</th>
+							<th nowrap="nowrap">Nombre Unidad</th>
+							<th nowrap="nowrap">Unidad de Medida</th>
+							<th nowrap="nowrap">Valor</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="scotch in scotches">
+							<td>{{ scotch.fecha }}</td>
+							<td>{{ scotch.nombre}}</td>
+							<td>{{ scotch.nombreUnidad}}</td>
+							<td>{{ scotch.unidadMedida }}</td>
+							<td>{{ scotch.valor }}</td>
+						</tr>
+					</tbody>
+				</table>
+             </p>
             </div>
           </div>
         </div>
       </div>
-	</header>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-    <script src="js/jquery-3.4.1.min.js"></script> 
-    <!-- Include all compiled plugins (below), or include individual files as needed --> 
-    <script src="../js/popper.min.js"></script> 
-    <script src="../js/bootstrap-4.4.1.js"></script>
-	<script src="../js/angular.min.js"></script>
-    <script src="../js/angular-ui-router.min.js"></script>
-    <script src="../js/angular-animate.min.js"></script> 
-    <script src="../js/angular-sanitize.min.js"></script> 
-    <script src="../js/angular-confirm.min.js"></script>
+	</header> 
+    <script src="js/jquery-3.1.0.min.js"></script> 
+	<script type="text/javascript" src="../js/angular.js"></script>
+    <script src="../js/ui-bootstrap-tpls-1.2.1.js"></script>
+     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script src="../js/app.js"></script>
   </body>
 </html>
