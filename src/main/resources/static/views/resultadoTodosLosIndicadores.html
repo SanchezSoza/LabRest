@@ -1,13 +1,33 @@
 <!doctype html>
 <html ng-app="app">
   <head>
-  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-    <script src="http://ui-grid.info/release/ui-grid.js"></script>
-	<link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+    <LINK href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script> 
+    <script type="text/javascript" src="../js/angular.js"></script>
+    <script type="text/javascript" src="../js/ui-bootstrap-tpls-1.2.1.js"></script>
     <script src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   </head>
-  <body>
-	<div ng-controller="TNTIndexController as indexController">
-		<div id="tntGridServices" ui-grid="{ data: tntPortfolio }"></div>
-	</div>
+  <body ng-controller="resultadoController">
+		<table id="rounded-corner" class="" border="1" style="align-items: center;">
+			<thead>
+				<tr>
+					<th nowrap="nowrap">Fecha</th>
+					<th nowrap="nowrap">Nombre</th>
+					<th nowrap="nowrap">Nombre Unidad</th>
+					<th nowrap="nowrap">Unidad de Medida</th>
+					<th nowrap="nowrap">Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="scotch in scotches">
+					<td>{{ scotch.fecha }}</td>
+					<td>{{ scotch.nombre}}</td>
+					<td>{{ scotch.nombreUnidad}}</td>
+					<td>{{ scotch.unidadMedida }}</td>
+					<td>{{ scotch.valor }}</td>
+				</tr>
+			</tbody>
+		</table>
   </body>
